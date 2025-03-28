@@ -1,0 +1,68 @@
+{% extends 'tracker/base.html' %}
+
+{% block title %}TimeBolt{% endblock %}
+
+{% block content %}
+<div class="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 via-blue-500 to-indigo-600 overflow-hidden p-6">
+    <!-- Floating bubbles in the background -->
+    <div class="absolute top-10 left-20 w-40 h-40 rounded-full bg-purple-400 opacity-20 blur-xl animate-float"></div>
+    <div class="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-blue-400 opacity-20 blur-xl animate-float-delay"></div>
+    <div class="absolute top-1/3 right-1/4 w-32 h-32 rounded-full bg-indigo-400 opacity-15 blur-xl animate-float"></div>
+
+    <!-- Bubble-like welcome panel -->
+    <div class="relative bg-white/20 backdrop-blur-lg rounded-[40px] shadow-2xl p-12 w-full max-w-4xl border border-white/30 overflow-hidden z-10 text-center">
+        <!-- Inner bubble highlight effect -->
+        <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-white/10 blur-2xl"></div>
+        
+        <!-- Header Section -->
+        <h1 class="text-5xl font-extrabold mb-4 text-white">The Most Efficient TimeBolt</h1>
+        <p class="text-lg text-white/80">Track your tasks efficiently. Unlimited tasks, free forever.</p>
+        <div class="flex items-center justify-center mt-4">
+            <span class="text-yellow-400 text-3xl">★ ★ ★ ★ ★</span>
+            <span class="ml-2 text-white/70">4.8 (1,234 reviews)</span>
+        </div>
+        <a href="{% url 'signup' %}" class="mt-6 inline-block bg-white/10 text-white px-6 py-3 rounded-md hover:bg-white/20 transition">Start Tracking Now - It's Free!</a>
+        
+        <!-- Icon Navigation Section -->
+        <div class="grid grid-cols-5 gap-6 mt-10 text-white">
+            <div class="flex flex-col items-center">
+                <span class="text-4xl">⏱️</span>
+                <p class="mt-2">Timer</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-4xl">📅</span>
+                <p class="mt-2">Calendar</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-4xl">📊</span>
+                <p class="mt-2">Reports</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-4xl">📝</span>
+                <p class="mt-2">Tasks</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-4xl">⚙️</span>
+                <p class="mt-2">Settings</p>
+            </div>
+        </div>
+
+        <!-- Sign In / Sign Up -->
+        <div class="mt-10 flex justify-center gap-4">
+            <a href="{% url 'login' %}" class="py-3 px-8 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">Sign In</a>
+            <a href="{% url 'signup' %}" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">Sign Up</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Floating animation for bubbles */
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    .animate-float { animation: float 8s ease-in-out infinite; }
+    .animate-float-delay { animation: float 10s ease-in-out infinite 2s; }
+</style>
+
+{% endblock %}
