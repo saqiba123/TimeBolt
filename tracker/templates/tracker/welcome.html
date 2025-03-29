@@ -15,43 +15,54 @@
         <div class="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-white/10 blur-2xl"></div>
         
         <!-- Header Section -->
-        <h1 class="text-5xl font-extrabold mb-4 text-white">The Most Efficient TimeBolt</h1>
-        <p class="text-lg text-white/80">Track your tasks efficiently. Unlimited tasks, free forever.</p>
+        <h1 class="text-5xl font-extrabold mb-4 text-dark">The Most Efficient TimeBolt</h1>
+        <p class="text-lg font-bold text-dark/80">Track your tasks efficiently. Unlimited tasks, free forever.</p>
         <div class="flex items-center justify-center mt-4">
             <span class="text-yellow-400 text-3xl">★ ★ ★ ★ ★</span>
-            <span class="ml-2 text-white/70">4.8 (1,234 reviews)</span>
+            <span class="ml-2 text-dark/70">4.8 (1,234 reviews)</span>
         </div>
-        <a href="{% url 'signup' %}" class="mt-6 inline-block bg-white/10 text-white px-6 py-3 rounded-md hover:bg-white/20 transition">Start Tracking Now - It's Free!</a>
+        {% comment %} <a href="{% url 'signup' %}" class="mt-6 inline-block bg-white/10 text-white px-6 py-3 rounded-md hover:bg-white/20 transition">Start Tracking Now - It's Free!</a> {% endcomment %}
+        <a href="{% url 'signup' %}" class="mt-6 inline-block text-white px-6 py-3 rounded-md bg-blue-600  hover:bg-blue-700 transition">Start Tracking Now - It's Free!</a>
         
         <!-- Icon Navigation Section -->
         <div class="grid grid-cols-5 gap-6 mt-10 text-white">
             <div class="flex flex-col items-center">
+                <a href="#" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
                 <span class="text-4xl">⏱️</span>
                 <p class="mt-2">Timer</p>
+                </a>
             </div>
             <div class="flex flex-col items-center">
+                <a href="#" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
                 <span class="text-4xl">📅</span>
                 <p class="mt-2">Calendar</p>
+                </a>
             </div>
             <div class="flex flex-col items-center">
+                <a href="#" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
                 <span class="text-4xl">📊</span>
                 <p class="mt-2">Reports</p>
+                </a>
             </div>
             <div class="flex flex-col items-center">
+                <a href="#" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
                 <span class="text-4xl">📝</span>
                 <p class="mt-2">Tasks</p>
+                </a>
             </div>
             <div class="flex flex-col items-center">
+                <a href="#" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
                 <span class="text-4xl">⚙️</span>
                 <p class="mt-2">Settings</p>
+                </a>
             </div>
         </div>
 
-        <!-- Sign In / Sign Up -->
+        {% comment %} <!-- Sign In / Sign Up -->
         <div class="mt-10 flex justify-center gap-4">
-            <a href="{% url 'login' %}" class="py-3 px-8 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">Sign In</a>
+            <a href="{% url 'login' %}" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">Sign In</a>
             <a href="{% url 'signup' %}" class="py-3 px-8 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">Sign Up</a>
-        </div>
+        </div> {% endcomment %}
     </div>
 </div>
 
