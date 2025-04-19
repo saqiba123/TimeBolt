@@ -9,7 +9,6 @@ TimeBolt is a simple time tracking web application built with Django. It helps u
 - 📊 Dashboard with task summaries
 - 📅 Filter tasks by date
 - 📈 View worked hours and task counts
-- 💾 Export tasks to CSV
 - 🔐 User authentication (sign up / login)
 - 🧠 Daily summary (basic)
 - 🖥️ Responsive and user-friendly UI
@@ -28,7 +27,7 @@ TimeBolt is a simple time tracking web application built with Django. It helps u
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/timebolt.git
+   git clone https://github.com/saqiba123/TimeBolt
    cd timebolt
    ```
 
