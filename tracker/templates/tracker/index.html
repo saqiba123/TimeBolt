@@ -12,6 +12,8 @@
                         <a href="#tasks" class="p-2 hover:bg-gray-800 rounded">Ongoing Tasks</a>
                         <a href="#work-summary-card" class="p-2 hover:bg-gray-800 rounded">Reports</a>
                         <a href="#calender" class="p-2 hover:bg-gray-800 rounded">Tasks by Date</a>
+                        <a href="#summarycard" class="p-2 hover:bg-gray-800 rounded">Daily Summary</a>
+             
                     </nav>
                 </aside>
                 <main class="flex-1 p-6 space-y-6 bg-gray-50">
@@ -102,6 +104,11 @@
                             <li class="p-2 bg-gray-100 rounded">Loading...</li>
                         </ul>
                     </div>
+                    <div class="bg-white p-6 rounded-lg shadow bg-gradient-to-br from-sky-200 via-blue-100 to-indigo-100"  id="summarycard">
+                        <h2 class="font-bold text-xl mb-4">✨ Daily Summary</h2>
+                        <p>{{ day_summary }}</p>
+                    </div>
+                    
                 </main>
             </div>
             {% else %}
@@ -122,8 +129,6 @@
                     </div>
                 </div>
             </div>
-
-
 
         {% endif %}
 

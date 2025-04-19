@@ -22,7 +22,20 @@
             <span class="ml-2 text-dark/70">4.8 (1,234 reviews)</span>
         </div>
         {% comment %} <a href="{% url 'signup' %}" class="mt-6 inline-block bg-white/10 text-white px-6 py-3 rounded-md hover:bg-white/20 transition">Start Tracking Now - It's Free!</a> {% endcomment %}
-        <a href="{% url 'signup' %}" class="mt-6 inline-block text-white px-6 py-3 rounded-md bg-blue-600  hover:bg-blue-700 transition">Start Tracking Now - It's Free!</a>
+        {% comment %} <a href="{% url 'signup' %}" class="mt-6 inline-block text-white px-6 py-3 rounded-md bg-blue-600  hover:bg-blue-700 transition">Start Tracking Now - It's Free!</a> {% endcomment %}
+        {% if user.is_authenticated %}
+            <div class="mt-6 text-dark text-lg">
+                Welcome back, {{ user.username }}! 👋<br>
+                Let’s get back to tracking your tasks.
+            </div>
+            <a href="{% url 'home' %}" class="py-3 px-8 inline-block text-dark bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+                Go to Dashboard
+            </a>
+        {% else %}
+            <a href="{% url 'signup' %}" class="mt-6 inline-block text-dark px-6 py-3 rounded-md bg-blue-600 hover:bg-blue-700 transition">
+                Start Tracking Now – It's Free!
+            </a>
+        {% endif %}
         
         <!-- Icon Navigation Section -->
         <div class="grid grid-cols-5 gap-6 mt-10 text-white">

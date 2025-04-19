@@ -16,7 +16,7 @@ urlpatterns = [
      # Allauth for social login and registration
   
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
     # Django's built-in auth for basic login/logout
     # path('api/', include('tracker.urls')),
     path("swagger/",schema_view.with_ui("swagger",cache_timeout=0), name="swagger-api-doc"),

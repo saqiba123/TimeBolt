@@ -1,7 +1,6 @@
 from django.urls import path, include
 from .views import EndTaskAPI, StartTaskAPI, ExportTasksCSV, home, TasksByDateAPI,SignUpView, welcome
 
-
 urlpatterns = [
     path('',welcome, name="welcome"),
     path('home/',home, name="home"),
